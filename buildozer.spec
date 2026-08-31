@@ -36,7 +36,7 @@ android.api = 33
 android.minapi = 21
 
 # (list) Architectures to build for
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a
 
 # (bool) Enable Android auto backup feature
 android.allow_backup = True
