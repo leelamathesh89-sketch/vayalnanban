@@ -36,16 +36,18 @@ jobs:
             libssl-dev \
             libffi-dev \
             libsqlite3-dev \
-            build-essential
+            build-essential \
+            ccache \
+            lld
 
       - name: Install Buildozer and Cython
         run: |
           pip install --upgrade pip
           pip install buildozer cython
 
-      - name: Build APK with Buildozer
+      - name: Build APK with Buildozer (Auto-Accept Licenses)
         run: |
-          buildozer android debug
+          yes | buildozer android debug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
